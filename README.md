@@ -60,6 +60,7 @@
 
     - 학습 계획
         - KOCW 운영체제 강의 듣기
+            - https://www.youtube.com/watch?v=6Q5Gb1fxNMk&list=PLL3t9Nt4HrfvGwOgy6UhLtS9iVKhlk4pk&index=23 
         - MQTT 프로토콜 : IoT 환경에서 많이 쓰이는 경량 메시징 프로토콜
         - 리눅스 시스템 프로그래밍 : ps , top , kill , fork() , pthread 같은 개념 익히기
         - C로 간단한 프로세스 & 스레드 실습 코드 짜보기
