@@ -47,6 +47,7 @@
     
     - 학습 계획
         - KOCW 네트워크 강의 듣기
+              - http://www.kocw.net/home/enrolment/enrolmentView.do?cid=6166c077e545b736&lid=7dfaa30c6695c4cf
         - gpt 및 영상 활용하여 간단한 구현 및 학습
 
 - 시스템 & 운영체제
