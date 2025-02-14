@@ -91,7 +91,7 @@ def check_game_clear():
 
     for i in range(len(values)):
         for j in range(i + 1, len(values)):
-            if values[i] + values[j] % 10 != 0:
+            if (values[i] + values[j]) % 10 != 0:
                 return False  
     return True  
 
@@ -157,7 +157,7 @@ def handle_mouse_events(event):
 
         if drag_start and drag_end:
             selected_blocks, total = check_drag_selection(drag_start, drag_end)
-
+            
             if total % 10 == 0:
                 remove_blocks(selected_blocks)  
 
@@ -196,6 +196,7 @@ def main():
 
         if check_game_clear():
             show_message("GAME CLEAR!")
+            reset_game()
 
         pygame.display.flip()
 
