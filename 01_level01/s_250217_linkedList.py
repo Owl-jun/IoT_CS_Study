@@ -41,7 +41,7 @@ class LinkedList:                           # ex: 이 클래스의 이름은 Lin
     def insert(self,find_data,insert_data): # insert 메서드 , 매개변수로 찾을값, 넣을값을 받고, 리스트의 찾을값이 있는 위치에 넣을값을 넣습니다.
         new_node = self.Node(insert_data)   #
         isFind = False                      #
-        
+
         for node in self.nodes:             #
             if node.data == find_data:      #
                 curNode = node              #
@@ -58,6 +58,20 @@ class LinkedList:                           # ex: 이 클래스의 이름은 Lin
         curNode.prev.next = new_node        #
         curNode.prev = new_node             #
         new_node.next = curNode             #
+    
+    def delete(self,del_data):              # delete 메서드, 매개변수로 지울 값을 입력받은 후 검색하여 노드를 삭제합니다.
+        for node in self.nodes:             #
+            if node.data == del_data:       #
+                delData = node              #
+                break                       #
+        if self.head == delData:            #
+            self.head = delData.next        #
+        elif delData.next == None:          #
+            delData.prev.next = None        #
+        else:                               #
+            delData.prev.next = delData.next#
+            delData.next.prev = delData.prev#
+        del(delData)                        #
 
     def print_list(self):                   # print_list 메서드, 현재 리스트에 존재하는 요소들을 출력합니다.
         current = self.head                 #
