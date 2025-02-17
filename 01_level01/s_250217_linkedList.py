@@ -102,13 +102,8 @@ class LinkedList:
 
     
 
-list1 = LinkedList()
-list1.push_back('김씨')
-list1.push_back('왕씨')
-list1.push_back('철씨')
-list1.print_list(True)
-list1.insert('왕씨','옹씨')
-list1.print_list()
+
+
 
 list2 = LinkedList()
 list2.push_back('굼씨')
