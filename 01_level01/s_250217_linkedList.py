@@ -72,6 +72,14 @@ class LinkedList:                           # ex: 이 클래스의 이름은 Lin
             delData.prev.next = delData.next#
             delData.next.prev = delData.prev#
         del(delData)                        #
+    
+    def find(self,find_data):               # find 메서드 , 매개변수로 찾을 값을 입력받은 후 검색하여 노드를 반환합니다.
+        findNode = None                     #
+        for node in self.nodes:             #
+            if node.data == find_data:      #
+                findNode = node             #
+                break                       #
+        return findNode                     #
 
     def print_list(self):                   # print_list 메서드, 현재 리스트에 존재하는 요소들을 출력합니다.
         current = self.head                 #
