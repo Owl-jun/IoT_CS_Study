@@ -79,18 +79,34 @@ class LinkedList:
                 break
         return findNode 
         
-    def print_list(self):
+    def print_list(self,reverse = False):
         current = self.head
-        while current:
-            print(current, end=" -> ")
-            current = current.next
-        print("None")
+        if reverse == False:
+            print('정방향 출력 : ', end = '')
+            while current:
+                print(current, end=" -> ")
+                current = current.next
+            print("None")
+        else :
+            print('역방향 출력 : ', end = '')
+            while True:
+                if current.next != None:
+                    current = current.next
+                else: break
+            while True:
+                print(current, end = ' --> ')
+                current = current.prev
+                if current == None:
+                    break
+            print("None")
+
+    
 
 list1 = LinkedList()
 list1.push_back('김씨')
 list1.push_back('왕씨')
 list1.push_back('철씨')
-list1.print_list()
+list1.print_list(True)
 list1.insert('왕씨','옹씨')
 list1.print_list()
 
