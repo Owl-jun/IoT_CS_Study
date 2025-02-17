@@ -47,6 +47,7 @@ for i in sample: # 여기 뭐넣어야 할까요
 # 챌린지 !!!
 # 아래 변수명에 들어갈 변수를 잘 찾아 넣어봅시다.
 # 그리고 어떻게 동작할 지 생각해봅시다.
+
 sample3 = [[0,20],[1,30],[2,40],[3,50]]
 for idx, value in sample3:
     print(f'인덱스{idx} : {value}', end=' ')
