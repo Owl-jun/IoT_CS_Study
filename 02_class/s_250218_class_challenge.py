@@ -12,7 +12,7 @@ class calc_ver01():
         self.accum += a
         return self.accum
     
-
+# 클래스명(클래스명) 으로 상속받을 수 있다.
 class calc_ver02(calc_ver01):
     def __init__(self):
         super().__init__()  # 부모 클래스의 생성자를 실행한다. 즉 calc_ver01 의 init 을 실행한다
