@@ -24,7 +24,7 @@ class cut_string:
     def __init__(self,string):
         self.string = string
     
-    cuttings = lambda self,n : [self.string[:n],self.string[n:]] # 코드 줄이기 중독증세
+    cuttings = lambda self,n : [self.string[:n],self.string[n:]] # 코드 한줄로 쓰는 강박증 환자
 
     # 정석
     def cutting(self,n):
