@@ -2,6 +2,7 @@
 # 챌린지 !! 내 생각을 클래스화 해보기
 
 # 아래의 문구를 정리해서 클래스로 만들어 보세요.
+
 """
 찬수는 문자열을 공부하다 빡쳐서, 문자열 컷팅기 cut_string 클래스를 만들기로 마음 먹었습니다.
 문자열 컷팅기, 즉 cut_string 클래스는 이러한 방식으로 동작합니다.
@@ -21,7 +22,17 @@
 
 
 
+class cut_string:
+    def __init__(self,string):
+        print("분노의 문자열 컷팅기 생성!")
+        self.string = string
 
+    def cuttings(self,n):
+        return [self.string[:n],self.string[n:]]
+
+
+cut = cut_string('python')
+print(cut.cutting(3))
 
 
 

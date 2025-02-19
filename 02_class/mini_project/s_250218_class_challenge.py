@@ -35,10 +35,6 @@ class calc_ver03(calc_ver02):
         self.accum = num
         self.log = []
         self.stack = []
-    
-    def _record(self):
-        self.log.append(self.accum)
-        self.stack.clear()
 
     def mul(self, a):
         self.log.append(self.accum)
@@ -48,7 +44,6 @@ class calc_ver03(calc_ver02):
 
     def div(self, a):
         if a != 0:
-            self._record()
             self.accum /= a
         else:
             print("0으로 나눌 수 없습니다!")

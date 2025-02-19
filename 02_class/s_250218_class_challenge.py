@@ -16,7 +16,11 @@ class calc_ver01():
 class calc_ver02(calc_ver01):
     def __init__(self):
         super().__init__()  # 부모 클래스의 생성자를 실행한다. 즉 calc_ver01 의 init 을 실행한다
-                            # 생성자를 호출하는 이유 : 부모클래스의 멤버변수를 사용하려고, 호출하지않아도 메서드(함수)는 사용이 가능하다.
+        # self.accum = 0    # 생성자를 호출하는 이유 : 부모클래스의 멤버변수를 사용하려고, 호출하지않아도 메서드(함수)는 사용이 가능하다.
+
+    # def add(self,a):
+    #     self.accum += a
+    #     return self.accum
 
     def sub(self,a):
         self.accum -= a
@@ -60,6 +64,7 @@ tip) __str__ 을 연구하다보면 답이 나올 것이다.
 
 -도전 챌린지-
 undo(뒤로가기)와 redo(앞으로가기) 기능을 구현해주세요.
+-tip ( 계산 히스토리를 기록할 자료구조를 찾아봅시다. stack 쓸거같네요.)
 
 예시)
 new_calc = calc_ver03(5)    # 5
@@ -73,3 +78,7 @@ new_calc.redo()             # 에러 , 예외처리 요망 ('redo 할 기록이 
 tip) 계산 히스토리를 기록할 수 있다면?
 제약조건은 없습니다. 기능 구현에 머리를 써주세요.
 """
+
+
+class calc_ver03("""상속"""):
+    pass
