@@ -1,12 +1,13 @@
 # core.py
 
 
-def add_contact(data):
+def add_contact(data,name=None,phone=None,email=None,address=None):
     """연락처 추가."""
-    name = input("이름: ")
-    phone = input("전화번호: ")
-    email = input("이메일: ")
-    address = input("주소: ")
+    if name is None:
+        name = input("이름: ")
+        phone = input("전화번호: ")
+        email = input("이메일: ")
+        address = input("주소: ")
 
     new_contact = {"name": name, "phone": phone, "email": email, "address": address}
     data.append(new_contact)
@@ -25,7 +26,7 @@ def search_contact(data,keyword = None):
             print(f"{c['name']} | {c['phone']} | {c['email']} | {c['address']}")
     else:
         print("해당 연락처를 찾을 수 없습니다.")
-    return data
+    return results
 
 def show_contacts(data):
     """모든 연락처 보기."""
@@ -36,9 +37,11 @@ def show_contacts(data):
     for c in data:
         print(f"{c['name']} | {c['phone']} | {c['email']} | {c['address']}")
 
-def delete_contact(data):
+def delete_contact(data,keyword = None):
     """연락처 삭제."""
-    keyword = input("삭제할 연락처 이름/전화번호: ")
+    if keyword == None:
+        keyword = input("삭제할 연락처 이름/전화번호: ")
+    
     results = [c for c in data if keyword.lower() in c['name'].lower() or keyword in c['phone']]
 
     if not results:
