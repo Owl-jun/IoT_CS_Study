@@ -111,7 +111,10 @@ class AddressBookGUI:
     
 
     def display_contacts(self):
-        self.update_treeview(self.data)
+        try:
+            self.update_treeview(self.data)
+        except Exception as e:
+            print(e)
 
     def update_treeview(self, contacts):
         # 기존 내용 제거

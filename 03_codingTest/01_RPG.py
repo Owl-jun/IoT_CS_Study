@@ -28,7 +28,14 @@ attack4 = [-1,-1,-1,-1,-1,-1,-1,-1]
 
 
 def solution(hp,monsters,attack):
-    
+    idx = list(monsters.keys())
+    for a in attack:
+        if a == -1:
+            pass
+        else:
+            hp -= monsters[idx[a]]
+            if hp <= 0:
+                return -1
     return hp
 
 
