@@ -72,6 +72,7 @@ def bingo():
         # 빙고 체크 및 결과 출력
         score = check_bingo(bingo_state)
         print(f"현재 빙고 개수: {score}")
+        
         if score >= 3:
             print("\n🎉 게임 클리어! 🎉")
             break
