@@ -24,8 +24,20 @@ r_str2 = 'graph'
 
 d_str3 = ['c','c','c','a','b','e','c']
 r_str3 = 'ace'
+
 def solution(r_str, d_str):
-    return
+    dDict = {}
+    rDict = {}
+    
+    for d in d_str:
+        dDict[d] = dDict.get(d,0) + 1
+    for r in r_str:
+        rDict[r] = rDict.get(r,0) + 1
+    
+    for str in rDict:
+        if rDict.get(str,0) > dDict.get(str,0):
+            return False
+    return True
 
 
 print(solution(r_str,d_str))        # True
