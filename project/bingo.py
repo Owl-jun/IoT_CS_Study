@@ -1,6 +1,10 @@
 import random
+import os
 
 ## 빙고게임 만들어보기.
+
+def clear_terminal():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def bingo():
 ## --------------------
@@ -8,6 +12,7 @@ def bingo():
     memo = []
     bingoState = {}
     score = 0
+    checkList = [False,False,False,False,False,False,False,False,False,False]
 ## --------------------
 
     ## bingoBoard = 랜덤한 숫자를 넣는 로직
@@ -26,8 +31,13 @@ def bingo():
             bingoState[col] = False # {3 : False,}
 
     while True:
-        print('Your turn : ')
-        playerPick = int(input('숫자 선택 : '))
+        print(checkList)
+        print(score)
+        score = 0
+
+
+        print(f'Your turn , 현재 스코어 : {score} ')
+        playerPick = int(input('숫자 선택 [ 1 ~ 50 사이 숫자 ] : '))
         # 빙고보드안에 있는 숫자인지 판단
         if playerPick in memo:
             bingoState[playerPick] = True
@@ -45,31 +55,36 @@ def bingo():
 
         ## 스코어 어떻게 체크하지? , 로직 개선해야됨 
         ## 1. 탐색 , 2. 스코어 올라가는 로직
+        
         # 가로 
         if bingoState[memo[0]] and bingoState[memo[1]] and bingoState[memo[2]] and bingoState[memo[3]]:
-            score += 1
+            checkList[0] = True
         if bingoState[memo[4]] and bingoState[memo[5]] and bingoState[memo[6]] and bingoState[memo[7]]:
-            score += 1
+            checkList[1] = True
         if bingoState[memo[8]] and bingoState[memo[9]] and bingoState[memo[10]] and bingoState[memo[11]]:
-            score += 1
+            checkList[2] = True
         if bingoState[memo[12]] and bingoState[memo[13]] and bingoState[memo[14]] and bingoState[memo[15]]:
-            score += 1
+            checkList[3] = True
         
         # 세로
         if bingoState[memo[0]] and bingoState[memo[4]] and bingoState[memo[8]] and bingoState[memo[12]]:
-            score += 1
+            checkList[4] = True
         if bingoState[memo[1]] and bingoState[memo[5]] and bingoState[memo[9]] and bingoState[memo[13]]:
-            score += 1
+            checkList[5] = True
         if bingoState[memo[2]] and bingoState[memo[6]] and bingoState[memo[10]] and bingoState[memo[14]]:
-            score += 1
+            checkList[6] = True
         if bingoState[memo[3]] and bingoState[memo[7]] and bingoState[memo[11]] and bingoState[memo[15]]:
-            score += 1
+            checkList[7] = True
 
         # 대각선
         if bingoState[memo[0]] and bingoState[memo[5]] and bingoState[memo[10]] and bingoState[memo[15]]:
-            score += 1
+            checkList[8] = True
         if bingoState[memo[12]] and bingoState[memo[9]] and bingoState[memo[6]] and bingoState[memo[3]]:
-            score += 1
+            checkList[9] = True
+
+        for check in checkList:
+            if check == True:
+                score += 1
 
         if score == 3:
             print('게임 클리어!')
