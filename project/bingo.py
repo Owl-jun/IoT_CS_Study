@@ -35,7 +35,7 @@ def print_board(bingo_board, bingo_state):
     print("\n=== Bingo Board ===")
     for i in range(size):
         for j in range(size):
-            print(' O ' if bingo_state[i][j] else ' X ', end=' ')
+            print(' O ' if bingo_state[i][j] else bingo_board[i][j], end=' ')
         print("\n")
     print("===================")
 
