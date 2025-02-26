@@ -1,4 +1,5 @@
 import bingo
+import rockscc
 ### CLI 
 
 """
@@ -17,8 +18,7 @@ while True:
     command = int(input())
 
     if command == 1 : 
-        # 가위바위보 게임 시작
-        print('가위바위보')
+        rockscc.GawiBawiBo()
         pass
     elif command == 2 :
         bingo.bingo()       # import 된 bingo.py 안의 bingo 함수를 실행한다.
