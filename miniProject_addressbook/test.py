@@ -14,6 +14,8 @@ def make_num(num):
         result = "00" + str(num)
     elif num < 1000:
         result = "0" + str(num)
+    elif num == 0:
+        result = "0000"
     else: result = str(num)
     return result
 
