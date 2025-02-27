@@ -19,11 +19,12 @@ def make_num(num):
     else: result = str(num)
     return result
 
-for _ in range(10000):
-    name = random.choice(f_names) + ''.join(random.sample(s_names,2)) 
-    f_num = make_num(random.randint(0,10000))    
-    l_num = make_num(random.randint(0,10000))    
-    phone = "010-" + f_num + "-" + l_num
-    core.add_contact(data,name,phone)
+def make_test():
+    for _ in range(10000):
+        name = random.choice(f_names) + ''.join(random.sample(s_names,2)) 
+        f_num = make_num(random.randint(0,10000))    
+        l_num = make_num(random.randint(0,10000))    
+        phone = "010-" + f_num + "-" + l_num
+        core.add_contact(data,name,phone)
 
-data_io.save_data(data)
+    data_io.save_data(data)
