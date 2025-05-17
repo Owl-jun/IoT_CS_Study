@@ -81,7 +81,7 @@
         Life 하지 않고 scope 가 가능하다는 말이 안됨.
         ```
 
-    - Context Swiching
+    - **Context Swiching**
         ```txt
         Context : 프로세스가 실행되던 시점의 CPU 레지스터 값, 스택 포인터, 프로그램 카운터 등의 정보 집합
 
@@ -115,4 +115,32 @@
 
     - fork
         ```txt 
+        ```
+
+    - Five-State Process Model
+        ```txt
+        ```
+    
+    - Suspended Processes
+        ```txt
+        Swapping : 
+        ```
+    
+    - **Two Suspend State (7-state Process Model)**
+        
+        <img src="." width=600>
+
+        ```txt
+        ```
+
+    - **Interrupt / Exception**
+        ```txt
+        Interrupt : 외부적인 이벤트 (external , Asynchronous)
+            키보드 input , 전원버튼 누르기 등등 ...
+        Exception : 프로그램 실행 중에 예외가 발생 (internal , Synchronous)
+            Faults  : 명령어를 마치지 못함(page miss)
+            Traps   : 명령어를 마치고 발생(Debug, system call)
+            Aborts  : 프로그램을 종료해야할 만큼 심각한 오류.
+        
+        인터럽트 / 익셉션 이벤트가 발생 -> 이벤트 핸들러 실행됨 (OS보단 펌웨어에 가까운 개념)
         ```
