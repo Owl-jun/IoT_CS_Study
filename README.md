@@ -3,7 +3,7 @@
 
 ## 조 스터디
 - 디스코드 (원격 스터디)
-    - https://discord.gg/5AWpG2Eq
+    - [https://discord.gg/5AWpG2Eq](https://discord.gg/kcJr6w6eAq)
 
 ### 250304 (스터디)
 - 참여자 : 강석준, 우동관, 최보정, 이형우, 황석준
